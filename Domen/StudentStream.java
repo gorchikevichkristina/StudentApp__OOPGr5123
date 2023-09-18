@@ -46,16 +46,11 @@ public class StudentStream implements Iterable<StudentGroup> {
 
             @Override
             public boolean hasNext() {
-                if (counter < stream.size()) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return counter < stream.size();
             }
 
             @Override
             public StudentGroup next() {
-
                 return stream.get(counter++);
             }
         };
@@ -65,6 +60,6 @@ public class StudentStream implements Iterable<StudentGroup> {
     public String toString() {
         return "idSteam = " + idStream
                 + " NumberOfGroups = " + stream.size()
-                + "\nStudents = " + stream.toString();
+                + "\nStudents = " + stream;
     }
 }

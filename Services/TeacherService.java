@@ -45,7 +45,7 @@ public class TeacherService implements iPersonServices {
     /**
      * печать списка преподавателей с сортировкой по имени
      */
-    public void printByName() {
+    public void printTeachers() {
         PersonComparator<Teacher> persComp = new PersonComparator<>();
         teachers.sort(persComp);
         for (Teacher tch : teachers) {

@@ -27,8 +27,8 @@ public class AccountControllers {
     public static <T extends Person> double averageAge(List<T> persons) {
         int sum = 0;
         for (T per: persons) {
-            sum+= per.getAge();
+            sum += per.getAge();
         }
-        return ((double) sum /persons.size());
+        return ((double) sum / persons.size());
     }
 }
